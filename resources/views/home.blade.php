@@ -1,23 +1,12 @@
 @extends('layouts.app')
 
+@section('css')
+<link rel="stylesheet" type="text/css" href="{{ mix('css/app/.css') }}">
+@endsection
+
+@section('js')
+<script src="{{ mix('js/app.js') }}"></script>
+@endsection
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<div id="app"></div>
 @endsection
